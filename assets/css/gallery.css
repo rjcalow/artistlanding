@@ -1,0 +1,68 @@
+body {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-user-select: none;
+    /* Safari */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    user-select: none;
+    /* Standard syntax */
+  }
+
+  .outer {
+    width: 100%;
+    height: 100%;
+  }
+
+  .top {
+    height: 8vh
+  }
+
+  .middle {
+    width: 100%;
+    height: 80vh;
+  }
+
+  .bottom {
+    height: 10vh;
+    font-size: 2vh;
+    text-align: right;
+  }
+  
+.bottom h3 {
+  font-size: 3vh;
+  margin-bottom: 1px;
+}
+
+  .middle section,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: inline
+  }
+
+  .prev {
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    left: 0;
+    height: 80vh;
+    cursor: w-resize;
+  }
+
+  .next {
+    z-index: 1;
+    position: absolute;
+    width: 40%;
+    right: 0;
+    height: 80vh;
+    cursor: e-resize;
+  }
+
+  .gallery_info {
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.788);
+    width:100%;
+  }
