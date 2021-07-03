@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+
+html {
+    
+    
+    -webkit-text-size-adjust: 100%;
+    /* Font varient */
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(191, 23, 23, 0.01) 0 0 1px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    line-height: 1.6;
+    color:#fff;
+    
+}
+
+
+
+
+h1, h2, h3, h4 {
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 900;line-height: 0;
+}
+
+h1 {
+  font-size: 2.2em;
+  letter-spacing: -0.085em;
+}
+h2 {
+  font-size: 4vh;
+}
+h3 {
+  letter-spacing: -0.065em;
+  font-size: 3vh;
+}
+a, li, p {
+    color:#fff;
+   font-size: 16px;
+   font-weight: 300;
+  
+}
+
+a:active {
+  color:blue;
+}
+a {
+  text-decoration: none;
+}
+
+.nonactive {
+  color: grey;
+}

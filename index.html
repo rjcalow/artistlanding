@@ -1,76 +1,108 @@
 <!DOCTYPE html>
+<!--..................................................
+    :                    ......                      :
+    :                 .:||||||||:.                   :
+    :                /            \                  :
+    :               (   o      o   )                 :
+    :-------@@@@----------:  :----------@@@@---------:
+    :                     `--'                       :
+    :                                                :
+    :                                                :
+    :         K I L R O Y   S A Y S   H I !          :
+    :................................................: -->
 <html>
-<meta charset="utf-8" />
-<title>RJCALOW photography</title>
-<meta name="robots" content="index, follow">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8" />
+  <title>RJCALOW photography</title>
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="description" content="RJCALOW - An artist, maker, writer of culture-nature dichotomy in overlooked spaces.">
-<meta name="keywords" content="art, portfolio, photography, landscape, edgelands, culture-nature, psychogeography">
-<link rel="shortcut icon" type="image/jpg" href="assets/icon.jpg" />
-
-<style>
-  body,
-  html {
-    height: 100%;
-    background-color: black;
-  }
-</style>
-
-<body>
-
-  <!-- info -->
-  <div onclick="w3_close('info')" class="w3-sidebar w3-bar-block w3-display-container"
-    style="display:none; background-color: rgba(255, 255, 255, 0.600); width:100%; " id="info">
-    <div class="menu fadein w3-display-middle  ">
-      <p>As an artist-photographer, I engage with misunderstood and ambivalent landscapes with an interwoven
-        nature-human relationship. I employ an eclectic array of traditional, contemporary and alternative photographic
-        practices led by narrative and conceptual themes. </p>
-      <p>RJCALOW@gmail.com | <a href="https://www.instagram.com/rjcalow/">@rjcalow</a></p>
-    </div>
-  </div>
-
-  <div class="w3-display-container bk" style="height:100%;">
-
-
-
-    <div id="menu" class="w3-display-bottommiddle fadein menu mainmenu " style="padding-bottom: 40px;">
-      <h1 style="letter-spacing: -0.066em;">RJCALOW</h1>
-
-      <ul class="w3-ul w3-center ">
-        <li class="w3-hover-opacity"><a href="https://rjcalow.co.uk/work">WORK</a></li>
-
-
-        <li class="w3-hover-opacity" onclick="w3_open('info')">INFO</li>
-
-
-      </ul>
-    </div>
-
-  </div>
-
+  <link rel="stylesheet" href="assets/css/text.css" />
+  <link rel="stylesheet" href="assets/css/effects.css" />
+  <link rel="stylesheet" href="assets/css/newlanding.css" />
+  <meta
+    name="description"
+    content="RJCALOW - An artist, maker, writer of culture-nature dichotomy in overlooked spaces."
+  />
+  <meta
+    name="keywords"
+    content="art, portfolio, photography, landscape, edgelands, culture-nature, psychogeography"
+  />
+  <link rel="shortcut icon" type="image/jpg" href="assets/icon.jpg" />
+  <script src="assets/scripts.js"></script>
+  <script src="assets/swiped-events.min.js"></script>
   <script>
-    function w3_open(y) {
-
-      var x = document.getElementById(y)
-
-
-      x.style.display = "block";
-      document.getElementById("menu").style.display = "none";
-
-    }
-    function w3_close(x) {
-
-      document.getElementById(x).style.display = "none";
-      document.getElementById("menu").style.display = "block"
-
-    }
-
-
-
+    document.addEventListener("swiped-right", function (e) {
+      background();
+    });
+    document.addEventListener("swiped-left", function (e) {
+      background();
+    });
   </script>
-</body>
+  <style>
+    body,
+    html {
+      height: 100%;
+    }
+  </style>
 
+  <body>
+    <div id="background" class="background"></div>
+
+    <div class="wrapper" id="wrapper" style="height: 100%">
+      <div id="header" class="fadein header">
+        <h1>RJCALOW</h1>
+
+        <p class="hero">Artist, maker, writer.</p>
+
+        <div id="menu" class="list">
+          <a id="infolink" href="#info" onclick="w3_open('info')">INFO</a>
+          <a id="worklink" href="#work" onclick="w3_open('work')">WORK</a>
+        </div>
+      </div>
+
+      <!-- info -->
+      <div class="middle hidden" id="info">
+        <div>
+          <h3>info</h3>
+          <p>
+            As an artist-photographer, I engage with misunderstood and
+            ambivalent landscapes with an interwoven nature-human relationship.
+            I employ an eclectic array of traditional, contemporary and
+            alternative photographic practices led by narrative and conceptual
+            themes.
+          </p>
+          <p style="text-align: left;">
+            2019/2020 MA Photography, Nottingham Trent University Distinction
+            <br />2015/18 BA (Hons) Lens based media, Lincoln College 1:1
+          </p>
+          <p>My <a href="https://wiki.rjcalow.co.uk">wiki</a>, <a href="https://roadsidepicnic.substack.com/">newsletter</a>, & <a href="https://www.instagram.com/rjcalow/">instagram</a>. 
+            
+         
+          </p>
+        </div>
+      </div>
+
+      <!-- work -->
+      <div class="middle hidden" id="work">
+        <div class="list">
+          <h3>work</h3>
+          <a href="https://rjcalow.co.uk/constructed">Constructed</a>
+
+          <a href="https://rjcalow.co.uk/darkpeak">Dark Peak</a>
+
+          <a href="https://rjcalow.co.uk/pandemicsketchbook"
+            >Pandemic Sketchbook</a
+          >
+
+          <a href="https://rjcalow.co.uk/snag">Snag / Inflorescence</a>
+
+          <a href="https://rjcalow.co.uk/unpitched">Unpitched</a>
+
+          <a href="https://rjcalow.co.uk/zone">Zone</a>
+        </div>
+      </div>
+
+      <div class="footer">rjcalow at gmail.com</div>
+    </div>
+  </body>
 </html>

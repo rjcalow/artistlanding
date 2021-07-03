@@ -10,6 +10,25 @@ body {
     /* Standard syntax */
   }
 
+  html {
+    
+    
+    -webkit-text-size-adjust: 100%;
+    /* Font varient */
+    font-variant-ligatures: none;
+    -webkit-font-variant-ligatures: none;
+    /* Smoothing */
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: rgba(191, 23, 23, 0.01) 0 0 1px;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    line-height: 1.6;
+    color:#000;
+    
+}
+
   .outer {
     width: 100%;
     height: 100%;
@@ -66,3 +85,4 @@ body {
     background-color: rgba(255, 255, 255, 0.788);
     width:100%;
   }
+
