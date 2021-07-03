@@ -131,3 +131,50 @@ body {
   color:#fff;
 }
 }
+@media only screen and (max-height: 700px) {
+  .background {position: fixed;}
+  body, html, .wrapper { overflow:visible}
+  .footer{position: fixed;}
+  .header, .middle {
+    /*! position:unset; */
+    display: block;
+    width:80%;
+    padding-left:2%;
+   
+    left:unset;
+    top:unset;
+    transform:none;
+    
+    
+  }
+  .middle { 
+  padding-top:5vh;
+    line-height: 1.5em;
+    text-align: justify;
+    
+    
+
+  }
+  .header {
+    padding-top:2%;
+  }
+  .middle .list a {
+  font-size:inherit;
+  display:block;
+  text-align: left;
+  float: none;
+}
+.middle .list  {
+  display:block;
+  text-align: left;
+ 
+}
+  .middle h3 {
+    display: none;
+  }
+  .footer {
+  display:block;
+  padding-right:10%;
+  color:#fff;
+}
+}
