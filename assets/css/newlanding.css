@@ -112,10 +112,12 @@ body {
     padding-top:8%;
   }
   .middle .list a {
-  font-size:inherit;
+  
   display:block;
   text-align: left;
   float: none;
+  font-size:4vh;
+    line-height: 1.5em;
 }
 .middle .list  {
   display:block;
@@ -138,7 +140,7 @@ body {
   .header, .middle {
     /*! position:unset; */
     display: block;
-    width:80%;
+    width:95%;
     padding-left:2%;
    
     left:unset;
@@ -159,10 +161,11 @@ body {
     padding-top:2%;
   }
   .middle .list a {
-  font-size:inherit;
   display:block;
-  text-align: left;
+  text-align: center;
   float: none;
+  font-size:4.5vh;
+    line-height: 1.8em;
 }
 .middle .list  {
   display:block;

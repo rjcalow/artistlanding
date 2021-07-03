@@ -46,7 +46,7 @@ a, li, p {
 }
 
 a:active {
-  color:blue;
+  color:#fff;
 }
 a {
   text-decoration: none;
