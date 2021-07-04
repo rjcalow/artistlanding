@@ -61,7 +61,7 @@ var Images = ["assets/constructed/RJCALOW-altcamerainlandscape-2.jpg",
 "assets/zone.gif"]
 
 var Imginfo = [
-'<a href="https://rjcalow.co.uk/constructed">Constructed<a/>',
+'<a href="https://rjcalow.co.uk/constructed">Constructed</a>',
 '<a href="https://rjcalow.co.uk/darkpeak">Dark Peak</a>',
 '<a href="https://rjcalow.co.uk/pandemicsketchbook">Pandemic Sketchbook</a>',
 ' <a href="https://rjcalow.co.uk/snag">Snag / Inflorescence</a>',

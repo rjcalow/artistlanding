@@ -61,14 +61,9 @@ width:100%;
   text-decoration: none;
   
 }
-.display {
-  position: absolute;
-  top:1vh;
-  right:0px;
-  padding: 8px 16px;
-  text-shadow: rgba(000, 000, 000, 100) 0 0 3px;
-  
-}
+
+
+
 .middle {
   padding-top: var(--top-space);
   text-shadow: rgba(000, 000, 000, 400) 0 0 2px;
@@ -92,8 +87,10 @@ margin-top: 4px;
 }
 
 .active {color: var(--accent); font-weight: bold;}
-.footer {text-align: right; position:fixed; bottom:5px; right:10px;}
-
+.footer {text-align: right; position:fixed; bottom:10px; right:10px;}
+.footer a { 
+  border-radius: 5px;
+  font-size:1.2em;background-color: rgba(0, 0, 0, 0.100);padding: 8px 16px;}
 .button {border-radius: 5px;
   display: block;
   background-color: rgba(0, 0, 0, 0.253);
