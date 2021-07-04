@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&family=Open+Sans&display=swap');
 
 html {
     
@@ -12,8 +12,8 @@ html {
     -moz-osx-font-smoothing: grayscale;
     font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
-    text-shadow: rgba(191, 23, 23, 0.01) 0 0 1px;
-    font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+    
+    font-family: "open sans", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
     line-height: 1.6;
     color:#fff;
     

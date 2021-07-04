@@ -1,0 +1,106 @@
+:root {
+  --accent: #ff401e;
+  --left-padding: 5px;
+  --top-space: 5px;
+}
+
+.body { 
+  margin:0px;
+padding:0px;
+width:100%;
+  text-shadow: rgba(000, 000, 000, 10) 0 0 3px;
+}
+
+
+.background {
+  position: fixed;
+  top:0px;
+  left:0px;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(../bk.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  z-index: 1;
+}
+
+.wrapper {
+  position: relative;
+  z-index: 2;
+  margin:0px;
+  padding:0px;
+  padding-left: var(--left-padding)
+}
+.header .hero, .header .list {
+  padding-left:var(--left-padding);
+  
+  margin: 0px;
+  padding-bottom: 3px;
+}
+.header {
+  padding-top: var(--top-space)
+}
+.header h1 {
+  text-shadow: rgba(000, 000, 000, 300) 0 0 1px;
+}
+.header .list a {
+  
+  border-radius: 5px;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.253);
+  padding-right:5px;
+  text-align: left;
+  float: none;
+  padding: 8px 16px;
+  margin-right:4px;
+  text-align: center;
+  text-decoration: none;
+  
+}
+.display {
+  position: absolute;
+  top:1vh;
+  right:0px;
+  padding: 8px 16px;
+  text-shadow: rgba(000, 000, 000, 100) 0 0 3px;
+  
+}
+.middle {
+  padding-top: var(--top-space);
+  text-shadow: rgba(000, 000, 000, 400) 0 0 2px;
+}
+
+.middle h3 {display: none;}
+
+.middle .list a {
+border-radius: 5px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.253);
+  padding-right:5px;
+  text-align: left;
+  float: none;
+  padding: 8px 16px;
+  margin-right:4px;
+  text-align: center;
+  text-decoration: none;
+margin-top: 4px;
+  
+}
+
+.active {color: var(--accent); font-weight: bold;}
+.footer {text-align: right; position:fixed; bottom:5px; right:10px;}
+
+.button {border-radius: 5px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.253);
+  padding-right:5px;
+  text-align: left;
+  float: none;
+  padding: 8px 16px;
+  margin-right:4px;
+  text-align: center;
+  text-decoration: none;
+margin-top: 4px;
+}

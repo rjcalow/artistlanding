@@ -18,7 +18,10 @@
 
   <link rel="stylesheet" href="assets/css/text.css" />
   <link rel="stylesheet" href="assets/css/effects.css" />
-  <link rel="stylesheet" href="assets/css/newlanding.css" />
+
+  <link rel="stylesheet" media="screen and (min-width: 801px)" href="assets/css/newlanding.css">
+  <link rel="stylesheet" media="screen and (max-width: 800px)" href="assets/css/smalllanding.css">
+  
   <meta
     name="description"
     content="RJCALOW - An artist, maker, writer of culture-nature dichotomy in overlooked spaces."
@@ -32,18 +35,12 @@
   <script src="assets/swiped-events.min.js"></script>
   <script>
     document.addEventListener("swiped-right", function (e) {
-      background();
+      background(1);
     });
     document.addEventListener("swiped-left", function (e) {
-      background();
+      background(-1);
     });
   </script>
-  <style>
-    body,
-    html {
-      height: 100%;
-    }
-  </style>
 
   <body>
     <div id="background" class="background"></div>
@@ -59,7 +56,9 @@
           <a id="worklink" href="#work" onclick="w3_open('work')">WORK</a>
         </div>
       </div>
-
+      <div class="display">
+        <div id="imginfo"></div>
+      </div>
       <!-- info -->
       <div class="middle hidden" id="info">
         <div>
@@ -75,7 +74,9 @@
             2019/2020 MA Photography, Nottingham Trent University Distinction
             <br />2015/18 BA (Hons) Lens based media, Lincoln College 1:1
           </p>
-          <p>My <a href="https://wiki.rjcalow.co.uk">wiki</a>, <a href="https://roadsidepicnic.substack.com/">newsletter</a>, & <a href="https://www.instagram.com/rjcalow/">instagram</a>. 
+          
+          <h3>Links</h3>
+          <p>🔗 <a class="button" href="https://wiki.rjcalow.co.uk">wiki</a> <a class="button" href="https://roadsidepicnic.substack.com/">newsletter</a> <a class="button" href="https://www.instagram.com/rjcalow/">instagram</a> 
             
          
           </p>
@@ -84,21 +85,24 @@
 
       <!-- work -->
       <div class="middle hidden" id="work">
+        <h3>work</h3>
         <div class="list">
-          <h3>work</h3>
-          <a href="https://rjcalow.co.uk/constructed">Constructed</a>
+          
+          <a href="https://rjcalow.co.uk/constructed" onmouseover="changebk('assets/constructed/RJCALOW-altcamerainlandscape-2.jpg')">Constructed</a>
 
-          <a href="https://rjcalow.co.uk/darkpeak">Dark Peak</a>
+          <a href="https://rjcalow.co.uk/darkpeak" onmouseover="changebk('assets/darkpeak/RJCALOW_peak_district_holga-8.jpg')">Dark Peak</a>
 
-          <a href="https://rjcalow.co.uk/pandemicsketchbook"
+          
+          
+          <a href="https://rjcalow.co.uk/pandemicsketchbook" onmouseover="changebk('assets/pandemicsketchbook/14.jpg')"
             >Pandemic Sketchbook</a
           >
 
-          <a href="https://rjcalow.co.uk/snag">Snag / Inflorescence</a>
+          <a href="https://rjcalow.co.uk/snag" onmouseover="changebk('assets/snag/2.jpg')">Snag / Inflorescence</a>
 
-          <a href="https://rjcalow.co.uk/unpitched">Unpitched</a>
+          <a href="https://rjcalow.co.uk/unpitched" onmouseover="changebk('assets/unpitched/0007.jpg')">Unpitched</a>
 
-          <a href="https://rjcalow.co.uk/zone">Zone</a>
+          <a href="https://rjcalow.co.uk/zone" onmouseover="changebk('assets/zone/Zone_book0008.jpg')">Zone</a>
         </div>
       </div>
 
