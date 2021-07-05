@@ -40,22 +40,35 @@
     document.addEventListener("swiped-left", function (e) {
       background(-1);
     });
+    document.addEventListener("swiped-down", function (e) {
+      apply_class("links", "swipe_down")
+      menu();
+    });
+    document.addEventListener("swiped-up", function (e) {
+      apply_class("links", "swipe_up")
+      menu();
+    });
   </script>
 
   <body>
     <div id="background" class="background"></div>
 
     <div class="wrapper" id="wrapper" style="height: 100%">
-      <div id="header" class="fadein header">
-        <h1>RJCALOW</h1>
 
-        <p class="hero">Artist, maker, writer.</p>
+      
 
-        <div id="menu" class="list">
-          <a id="infolink" href="#info" onclick="w3_open('info')">INFO</a>
-          <a id="worklink" href="#work" onclick="w3_open('work')">WORK</a>
+      
+        <div id="header" class="fadein header">
+          <h1>RJCALOW</h1>
+  
+          <p class="hero">Artist, maker, writer.</p>
+          
         </div>
-      </div>
+  
+    
+        
+          
+
 
       <!-- info -->
       <div class="middle hidden" id="info">
@@ -107,5 +120,11 @@
       <div class="footer">      
         <div id="imginfo"></div></div>
     </div>
+
+    <div id="icon" class="rcorner" onclick="menu()"></div>
+    
+    <div class="menuoverlay" id="menu"><div id="links" class="links">
+      <a id="infolink" href="#info" onclick="w3_open('info')">INFO</a>
+      <a id="worklink" href="#work" onclick="w3_open('work')">WORK</a>    </div></div>
   </body>
 </html>

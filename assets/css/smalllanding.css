@@ -1,28 +1,33 @@
 :root {
   --accent: #ff401e;
   --left-padding: 5px;
-  --top-space: 5px;
+  --top-space: 1px;
 }
 
-.body { 
-  margin:0px;
-padding:0px;
-width:100%;
+html {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
   text-shadow: rgba(000, 000, 000, 10) 0 0 3px;
 }
 
-
 .background {
   position: fixed;
-  top:0px;
-  left:0px;
-  bottom:0px;
-  right:0px;
+
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url(../bk.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+    url(../bk.jpg);
   background-position: center;
   background-attachment: fixed;
   z-index: 1;
@@ -31,75 +36,158 @@ width:100%;
 .wrapper {
   position: relative;
   z-index: 2;
-  margin:0px;
-  padding:0px;
-  padding-left: var(--left-padding)
+  margin: 0px;
+  padding: 0px;
+  padding-left: var(--left-padding);
+  padding-right:  var(--left-padding);
 }
-.header .hero, .header .list {
-  padding-left:var(--left-padding);
-  
+.header .hero,
+.header .list {
+  padding-left: var(--left-padding);
+
   margin: 0px;
   padding-bottom: 3px;
 }
 .header {
-  padding-top: var(--top-space)
+  padding-top: var(--top-space);
 }
 .header h1 {
   text-shadow: rgba(000, 000, 000, 300) 0 0 1px;
 }
+.header .list {
+  transition: top 0.5s ease-in-out;
+
+  /*! position: position: absolute; */
+  /*! top:0; */
+
+  position: absolute;
+  background-color: white;
+  width: 100%;
+}
 .header .list a {
-  
   border-radius: 5px;
   display: inline-block;
   background-color: rgba(0, 0, 0, 0.253);
-  padding-right:5px;
+  padding-right: 5px;
   text-align: left;
   float: none;
   padding: 8px 16px;
-  margin-right:4px;
+  margin-right: 4px;
   text-align: center;
   text-decoration: none;
-  
 }
-
-
 
 .middle {
   padding-top: var(--top-space);
+  /*! padding-left: var(--left-padding); */
+
   text-shadow: rgba(000, 000, 000, 400) 0 0 2px;
 }
 
-.middle h3 {display: none;}
-
-.middle .list a {
-border-radius: 5px;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.253);
-  padding-right:5px;
-  text-align: left;
-  float: none;
-  padding: 8px 16px;
-  margin-right:4px;
-  text-align: center;
-  text-decoration: none;
-margin-top: 4px;
-  
+.middle h3 {
+  display: none;
 }
 
-.active {color: var(--accent); font-weight: bold;}
-.footer {text-align: right; position:fixed; bottom:10px; right:10px;}
-.footer a { 
+.middle .list a {
   border-radius: 5px;
-  font-size:1.2em;background-color: rgba(0, 0, 0, 0.100);padding: 8px 16px;}
-.button {border-radius: 5px;
   display: block;
   background-color: rgba(0, 0, 0, 0.253);
-  padding-right:5px;
+
+  padding: 15px 30px;
+
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+}
+
+.active {
+  color: var(--accent);
+  font-weight: bold;
+}
+.footer {
+  text-align: right;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.footer a {
+  border-radius: 5px;
+  font-size: 1.2em;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 8px 16px;
+}
+.button {
+  border-radius: 5px;
+  display: block;
+  background-color: rgba(0, 0, 0, 0.253);
+  padding-right: 5px;
   text-align: left;
   float: none;
   padding: 8px 16px;
-  margin-right:4px;
+  margin-right: 4px;
   text-align: center;
   text-decoration: none;
-margin-top: 4px;
+  margin-top: 4px;
+}
+
+.rcorner {
+  width: 60px;
+  height: 60px;
+
+  top: 1px;
+  right: 1px;
+  z-index: 4;
+  position: absolute;
+  background-image: url("../compass.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*! background-blend-mode:hue; */
+  background-color: transparent;
+  filter: invert(100%) brightness(100%);
+  transition: 0.9s all ease-in-out;
+  cursor: grabbing;
+}
+
+.menuoverlay {
+  position: absolute;
+  top:0px;
+  left:0px;
+  right:0px;
+   width:100%; 
+   height:100%; 
+  margin: 0px;
+  padding: 0px;
+  z-index: 3;
+  background-color: rgba(0, 0, 0, 0.900);
+  text-align: center;
+  display: none;
+  transition: 0.9s all ease-in-out;
+
+}
+
+.menuoverlay .links {
+  position:relative;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%); 
+  transform: translate(-50%, -50%); 
+
+}
+.menuoverlay .links a {
+  font-size: 3em;
+  line-height: 1.4em;
+  padding: 8px 25px;
+  
+  letter-spacing: -0.06em;
+  text-transform: lowercase;
+  display: block;
+  font-family: "Noto Sans JP", sans-serif;
+
+  box-shadow: 0px 0px 0px -1px rgba(219, 23, 23, 0.75) inset;
+  
+}
+.menuoverlay .links a:hover {
+  transition: 0.9s all ease-in-out;
+  box-shadow: 0px -20px 0px -1px rgba(219, 23, 23, 0.75) inset;
 }
