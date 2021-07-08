@@ -1,0 +1,163 @@
+@import url('http://fonts.cdnfonts.com/css/futura-lt');
+:root {
+  --accent: #ff401e;
+  --text-col: black;
+  --bk-col: white;
+}
+
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: var(--bk-col);
+  color:  var(--text-col);
+  /*! text-shadow: rgb(000, 000, 000) 0 0 1px; */
+  -webkit-text-size-adjust: 100%;
+  /* Font varient */
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  /* Smoothing */
+  text-rendering: optimizeLegibility;
+  
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  
+line-height: 2em;
+  font-size: 16px;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
+
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+  /* System Fonts as used by Medium and WordPress */
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,"Helvetica Neue",sans-serif;
+
+}
+
+.header {
+  text-align: center;
+
+
+  
+}
+
+section {
+  scroll-snap-align:center;
+    
+        
+
+}
+
+.col {
+  color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.4),
+      rgba(255, 255, 255, 0.305)
+    ),
+    url(../bk.jpg);
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+
+  /*! flex-wrap: wrap; */
+  text-align: center;
+  margin-bottom: 20%;
+  /*! margin: auto 5%; */
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Futura LT', sans-serif;
+  font-weight: 400;
+  
+}
+
+h3 {
+  font-size: 2.5em;
+  line-height: 0.5em;
+  /*! font-family: "jost"; */
+  text-transform: lowercase;
+  margin: auto 0px 20px 0px;  
+
+  \31 : ;
+}
+h4 {
+  text-shadow: rgb(000, 000, 000) 0 0 5px;
+  font-size: 2em;
+  line-height: 0.5em;
+}
+h1 {
+  text-shadow: rgb(000, 000, 000) 0 0 5px;
+  font-size: 4em;
+  line-height: 1em;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+  align-items:center;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  text-align: center;
+  flex-grow: 1;
+  min-height: 100vh;
+gap:12px;
+  
+}
+.row:last-child {
+  /* min-height: 50vh; */
+}
+.row > section {
+  
+  width: 50ch;
+}
+
+
+section ul {
+    list-style-type: none; /* Remove bullets */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margins */
+  line-height: 3em;
+}
+section p, section ul {
+  /* text-shadow: rgb(000, 000, 000) 0 0.50px */
+}
+section {
+  
+  padding:0px;
+  margin:0px;
+  text-align: left;
+  margin:5px;
+}
+
+a {
+  box-shadow: inset 0 -8px 0 rgba(123, 255, 0, 0.2300);
+  text-decoration: none;
+}
+a:visited {
+  color:black;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .row > section {
+    width: 100%;
+  }
+  section {
+    text-align: center;
+    scroll-snap-align:center;
+    margin-bottom:50vh;
+    margin-top:50vh ;
+  }
+  .header {margin:auto;}
+}

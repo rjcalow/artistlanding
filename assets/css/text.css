@@ -24,7 +24,7 @@ html {
 
 h1, h2, h3, h4 {
   font-family: 'Noto Sans JP', sans-serif;
-  font-weight: 900;line-height: 0;
+  font-weight: 900;/*! line-height: 0; */
 }
 
 h1 {
