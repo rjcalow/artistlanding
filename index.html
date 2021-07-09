@@ -36,154 +36,174 @@
     });
 
     var Images = [
-  "assets/constructed/RJCALOW-altcamerainlandscape-2.jpg",
-  "assets/darkpeak/RJCALOW_peak_district_holga-8.jpg",
-  "assets/pandemicsketchbook/14.jpg",
-  "assets/snag/2.jpg",
-  "assets/unpitched/0007.jpg",
-  "assets/zone.gif",
-];
+      "assets/constructed/RJCALOW-altcamerainlandscape-2.jpg",
+      "assets/darkpeak/RJCALOW_peak_district_holga-8.jpg",
+      "assets/pandemicsketchbook/14.jpg",
+      "assets/snag/2.jpg",
+      "assets/unpitched/0007.jpg",
+      "assets/zone.gif",
+    ];
 
-var Imginfo = [
-  'https://rjcalow.co.uk/constructed',
-  'https://rjcalow.co.uk/darkpeak',
-  'https://rjcalow.co.uk/pandemicsketchbook',
-  'https://rjcalow.co.uk/snag',
-  'https://rjcalow.co.uk/unpitched',
-  'https://rjcalow.co.uk/zone',
-];
-var i = 0;
-function phone_slide(x) {
-  i = i + x;
-  if (i >= 6) {
-    i = 0;
-  } else if (i < 0) {
-    i = 5;
-  }
-  //html = '<a href="' +Imginfo[i]+ '"><img id="frame" src="'+Images[i]+'" width="100%"></a>'
-  //document.getElementById("imgframe").innerHTML = html
-  document.getElementById("frame").style.visibility = "hidden"
-  document.getElementById("imgframe").style.backgroundImage = "url(" + Images[i] + ")";
-  document.getElementById("imgframe").style.backgroundPosition = "center"
-  document.getElementById("imgframe").style.backgroundSize = "contain"
-  document.getElementById("imgframe").style.backgroundRepeat ="no-repeat"
-  //document.getElementById("imgframe").on  = window.location.href=  Imginfo[i]
-}
+    var Imginfo = [
+      "https://rjcalow.co.uk/constructed",
+      "https://rjcalow.co.uk/darkpeak",
+      "https://rjcalow.co.uk/pandemicsketchbook",
+      "https://rjcalow.co.uk/snag",
+      "https://rjcalow.co.uk/unpitched",
+      "https://rjcalow.co.uk/zone",
+    ];
+    var i = 0;
+    function phone_slide(x) {
+      i = i + x;
+      if (i >= 6) {
+        i = 0;
+      } else if (i < 0) {
+        i = 5;
+      }
+      //html = '<a href="' +Imginfo[i]+ '"><img id="frame" src="'+Images[i]+'" width="100%"></a>'
+      //document.getElementById("imgframe").innerHTML = html
+      document.getElementById("frame").style.visibility = "hidden";
+      document.getElementById("imgframe").style.backgroundImage =
+        "url(" + Images[i] + ")";
+      document.getElementById("imgframe").style.backgroundPosition = "center";
+      document.getElementById("imgframe").style.backgroundSize = "contain";
+      document.getElementById("imgframe").style.backgroundRepeat = "no-repeat";
+      //document.getElementById("imgframe").on  = window.location.href=  Imginfo[i]
+    }
 
-
-function changebk(img) {
-  //document.getElementById("works").style.backgroundImage =
-  document.getElementById("frame").style.visibility = "visable"
-   // 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),url("' + img + '")';
-  document.getElementById("frame").src = img;
-
-}
-
-</script>
+    function changebk(img) {
+      //document.getElementById("works").style.backgroundImage =
+      document.getElementById("frame").style.visibility = "visable";
+      // 'linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),url("' + img + '")';
+      document.getElementById("frame").src = img;
+    }
+  </script>
   <body>
-    <div class="scroll_wrapper"> 
-    <div class="col">
-      <section class="fadein header">
-        <h4>Hi, I'm Richard</h4>
-        <h1>Artist, maker, writer.</h1>
-      </section>
-    </div>
+    <div class="scroll_wrapper">
+      <div class="col">
+        <section class="fadein header">
+          <h4>Hi, I'm Richard</h4>
+          <h1>Artist, maker, writer.</h1>
+        </section>
+      </div>
 
-    <div class="row">
-      <section  id="work">
-        <h3>works</h3>
+      <div class="row">
+        <section id="work">
+          <h3>works</h3>
 
-        <ul>
-          <li>
-            <a
-              href="https://rjcalow.co.uk/constructed"
-              onmouseover="changebk('assets/constructed/RJCALOW-altcamerainlandscape-2.jpg')"
-              >Constructed</a
-            >
-          </li>
+          <ul>
+            <li>
+              <a
+                href="https://rjcalow.co.uk/constructed"
+                onmouseover="changebk('assets/constructed/RJCALOW-altcamerainlandscape-2.jpg')"
+                >Constructed</a
+              >
+            </li>
 
-          <li>
-            <a
-              href="https://rjcalow.co.uk/darkpeak"
-              onmouseover="changebk('assets/darkpeak/RJCALOW_peak_district_holga-8.jpg')"
-              >Dark Peak</a
-            >
-          </li>
+            <li>
+              <a
+                href="https://rjcalow.co.uk/darkpeak"
+                onmouseover="changebk('assets/darkpeak/RJCALOW_peak_district_holga-8.jpg')"
+                >Dark Peak</a
+              >
+            </li>
 
-          <li>
-            <a
-              href="https://rjcalow.co.uk/pandemicsketchbook"
-              onmouseover="changebk('assets/pandemicsketchbook/14.jpg')"
-              >Pandemic Sketchbook</a
-            >
-          </li>
+            <li>
+              <a
+                href="https://rjcalow.co.uk/pandemicsketchbook"
+                onmouseover="changebk('assets/pandemicsketchbook/14.jpg')"
+                >Pandemic Sketchbook</a
+              >
+            </li>
 
-          <li>
-            <a
-              href="https://rjcalow.co.uk/snag"
-              onmouseover="changebk('assets/snag/2.jpg')"
-              >Snag / Inflorescence</a
-            >
-          </li>
+            <li>
+              <a
+                href="https://rjcalow.co.uk/snag"
+                onmouseover="changebk('assets/snag/2.jpg')"
+                >Snag / Inflorescence</a
+              >
+            </li>
 
-          <li>
-            <a
-              href="https://rjcalow.co.uk/unpitched"
-              onmouseover="changebk('assets/unpitched/0007.jpg')"
-              >Unpitched</a
-            >
-          </li>
+            <li>
+              <a
+                href="https://rjcalow.co.uk/unpitched"
+                onmouseover="changebk('assets/unpitched/0007.jpg')"
+                >Unpitched</a
+              >
+            </li>
 
-          <li>
-            <a
-              href="https://rjcalow.co.uk/zone"
-              onmouseover="changebk('assets/zone/Zone_book0008.jpg')"
-              >Zone</a
-            >
-          </li>
-        </ul>
-      </section>
-      <section class="background" id="imgframe">
-        <img id="frame" src="assets/bk.jpg" width="100%" />
-      </section>
-    </div>
-    <!-- info -->
-    <div class="row">
-      <section id="info">
-        <h3>info</h3>
-        <p>
-          As an artist-photographer, I engage with misunderstood and ambivalent
-          landscapes with an interwoven nature-human relationship. I employ an
-          eclectic array of traditional, contemporary and alternative
-          photographic practices led by narrative and conceptual themes.
-        </p></section>
+            <li>
+              <a
+                href="https://rjcalow.co.uk/zone"
+                onmouseover="changebk('assets/zone/Zone_book0008.jpg')"
+                >Zone</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section class="background" id="imgframe">
+          <img id="frame"
+          src="assets/constructed/RJCALOW-altcamerainlandscape-2.jpg""
+          width="100%" />
+        </section>
+      </div>
+      <!-- info -->
+      <div class="row">
+        <section id="info">
+          <h3>info</h3>
+          <p>
+            As an artist-photographer, I engage with misunderstood and
+            ambivalent landscapes with an interwoven nature-human relationship.
+            I employ an eclectic array of traditional, contemporary and
+            alternative photographic practices led by narrative and conceptual
+            themes.
+          </p>
+        </section>
 
         <section>
           <h3>Education</h3>
-          <p>
-           <i>2019/2020</i> MA Photography, Nottingham Trent University Distinction<br>          
-          2015/18</i> BA (Hons) Lens based media, Lincoln College 1:1
-        </p>
+          <ul>
+            <li>
+              <i>2019/2020</i>
+              <ul>
+                <li>MA Photography, Nottingham Trent University Distinction</li>
+              </ul>
+            </li>
+            <li>
+              <i>2015/18</i>
+              <ul>
+                <li>BA (Hons) Lens based media, Lincoln College 1:1</li>
+              </ul>
+            </li>
+          </ul>
         </section>
-      
-    </div>
+      </div>
 
-    <div class="row">
-      <section>
-        <h3>Links</h3>
-        <p>
-          🔗 <a class="button" href="https://wiki.rjcalow.co.uk">wiki</a>
-          <a class="button" href="https://roadsidepicnic.substack.com/"
-            >newsletter</a
-          >
-          <a class="button" href="https://www.instagram.com/rjcalow/"
-            >instagram</a
-          >
-        </p>
-      </section>
-      <section><h3>Contact</h3><p>rjcalow at gmail.com</p></section>
+      <div class="row">
+        <section>
+          <h3>Links</h3>
+          <ul>
+            
+            <li>
+              <a class="button" href="https://wiki.rjcalow.co.uk">my wiki</a>
+            </li>
+            <li>
+              <a class="button" href="https://roadsidepicnic.substack.com/"
+                >newsletter</a
+              >
+            </li>
+            <li>
+              <a class="button" href="https://www.instagram.com/rjcalow/"
+                >instagram</a
+              >
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h3>Contact</h3>
+          <p>rjcalow at gmail.com</p>
+        </section>
+      </div>
     </div>
-  </div>
-
   </body>
 </html>
