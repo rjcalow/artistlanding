@@ -1,8 +1,9 @@
 @import url("https://fonts.cdnfonts.com/css/futura-lt");
 :root {
-  --accent: #ff401e;
+  --accent: #c91f37;
   --text-col: black;
   --bk-col: white;
+  --blur: 2px;
 }
 
 html,
@@ -25,11 +26,12 @@ body {
 
   line-height: 2em;
   font-size: 16px;
-  -ms-scroll-snap-type: mandatory;
-  scroll-snap-type: mandatory;
-
+scroll-behavior: smooth;
+  scroll-snap-stop: always;
   -ms-scroll-snap-type: y mandatory;
   scroll-snap-type: y mandatory;
+  overscroll-behavior-y: none; 
+  overscroll-behavior: none;
   /* System Fonts as used by Medium and WordPress */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, "Helvetica Neue", sans-serif;
@@ -37,23 +39,53 @@ body {
 
 .header {
   text-align: center;
+    scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
-section {
+.left {
   scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
-.col {
-  color: white;
+.splash {
+  scroll-snap-align: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--accent);
+  background-image: url("../iconred.jpg");
+  background-repeat: no-repeat;
+
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+
+  /*! flex-wrap: wrap; */
+  text-align: center;
+transition: all 0.4ms linear;
+  /*! margin: auto 5%; */
+}
+
+#hero {
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(
       rgba(0, 0, 0, 0.4),
       rgba(000, 000, 000, 0.205)
     ),
-    url(../bk.jpg);
+    url(../peaks.jpg);
   background-position: center;
   background-attachment: fixed;
+  /*background-color: var(--accent); */
+}
+
+.col {
+  color: white;
+
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -61,7 +93,7 @@ section {
 
   /*! flex-wrap: wrap; */
   text-align: center;
-  margin-bottom: 20%;
+  
   /*! margin: auto 5%; */
 }
 
@@ -79,8 +111,6 @@ h3 {
   /*! font-family: "jost"; */
   text-transform: lowercase;
   margin: auto 0px 20px 0px;
-
-  \31 : ;
 }
 h4 {
   text-shadow: rgb(000, 000, 000) 0 0 5px;
@@ -98,7 +128,7 @@ h1 {
   flex-direction: row;
 
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-shrink: 1;
   flex-wrap: wrap;
   text-align: center;
@@ -118,11 +148,13 @@ section ul {
   padding: 0; /* Remove padding */
   margin: 0; /* Remove margins */
   line-height: 3em;
+  margin-bottom: 1em;
 }
-section p,
-section ul {
-  /* text-shadow: rgb(000, 000, 000) 0 0.50px */
+
+section li {
+  margin-bottom: 0.4em;
 }
+
 section {
   padding: 0px;
   margin: 0px;
@@ -131,11 +163,50 @@ section {
 }
 
 a {
-  box-shadow: inset 0 -8px 0 rgba(123, 255, 0, 0.23);
+  box-shadow: inset 0 -8px 0 rgba(201, 31, 55, 0.23);
   text-decoration: none;
-}
-a:visited a:active {
   color: var(--text-col);
+}
+a :visited {
+    color: var(--text-col);
+}
+
+a:active {
+  color: var(--text-col);
+}
+#work {
+  font-family: "Futura LT", sans-serif;
+  font-size: 1.1em;
+  text-align: right;
+}
+a:hover {
+  box-shadow: inset 0 -8px 0 rgba(201, 31, 55, 0.75);
+}
+
+.blur {
+  -webkit-filter: blur(var(--blur));
+  -moz-filter: blur(var(--blur));
+  -o-filter: blur(var(--blur));
+  -ms-filter: blur(var(--blur));
+  filter: blur(var(--blur));
+  
+  
+}
+
+.desaturate {
+  filter: grayscale(100%);
+}
+
+#bottom {
+  justify-content: center;
+ align-items: baseline;
+  align-content: center;
+  /*! text-align: justify; */
+}
+@media only screen and (max-width: 1013px) {
+  #work {
+    text-align: center;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -151,4 +222,23 @@ a:visited a:active {
   .header {
     margin: auto;
   }
+  #work {
+    text-align: center;
+  }
+  #hero {
+    background-position: right;
+  }
+  #imgframe {
+    visibility: hidden;
+    display:none;
+    scroll-snap-align: unset;
+  }
+
+  .left {
+
+}
+section {
+  scroll-snap-align: center;
+  scroll-snap-stop: center;
+}
 }

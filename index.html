@@ -26,14 +26,30 @@
   />
   <link rel="shortcut icon" type="image/jpg" href="assets/icon.jpg" />
   <link rel="stylesheet" href="assets/css/landing.css" />
-  <script src="assets/swiped-events.min.js"></script>
+  <!-- <script src="assets/swiped-events.min.js"></script> -->
   <script>
-    document.addEventListener("swiped-right", function (e) {
-      phone_slide(1);
-    });
-    document.addEventListener("swiped-left", function (e) {
-      phone_slide(-1);
-    });
+    window.onscroll = function () {
+      blur();
+    };
+
+    function blur() {
+      if (
+        document.body.scrollTop > 100 ||
+        document.documentElement.scrollTop > 100
+      ) {
+        document.getElementById("splash").classList.add("desaturate");
+        //document.getElementById("splash").classList.add("desaturate");
+      } else {
+        document.getElementById("splash").classList.remove("desaturate");
+        //document.getElementById("splash").classList.remove("desaturate");
+      }
+    }
+    // document.addEventListener("swiped-right", function (e) {
+    //   phone_slide(1);
+    // });
+    // document.addEventListener("swiped-left", function (e) {
+    //   phone_slide(-1);
+    // });
 
     var Images = [
       "assets/constructed/RJCALOW-altcamerainlandscape-2.jpg",
@@ -80,15 +96,18 @@
   </script>
   <body>
     <div class="scroll_wrapper">
-      <div class="col">
-        <section class="fadein header">
-          <h4>Hi, I'm Richard</h4>
+    <div class="splash" id="splash"></div>
+
+    
+      <div class="col" id="hero">
+        <section id="head" class="fadein header">
+          <h4>Hi, I'm Richard.</h4>
           <h1>Artist, maker, writer.</h1>
         </section>
       </div>
 
       <div class="row">
-        <section id="work">
+        <section id="work" class="left">
           <h3>works</h3>
 
           <ul>
@@ -149,7 +168,7 @@
       </div>
       <!-- info -->
       <div class="row">
-        <section id="info">
+        <section id="info" class="left">
           <h3>info</h3>
           <p>
             As an artist-photographer, I engage with misunderstood and
@@ -179,11 +198,10 @@
         </section>
       </div>
 
-      <div class="row">
-        <section>
+      <div class="row" id="bottom">
+        <section class="left">
           <h3>Links</h3>
           <ul>
-            
             <li>
               <a class="button" href="https://wiki.rjcalow.co.uk">my wiki</a>
             </li>
@@ -199,7 +217,7 @@
             </li>
           </ul>
         </section>
-        <section>
+        <section class="contact" id="contact">
           <h3>Contact</h3>
           <p>rjcalow at gmail.com</p>
         </section>
