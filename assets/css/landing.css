@@ -35,6 +35,14 @@ scroll-behavior: smooth;
   /* System Fonts as used by Medium and WordPress */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen-Sans, "Helvetica Neue", sans-serif;
+  
+  -webkit-user-select: none; /* Safari */        
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* IE10+/Edge */
+user-select: none; /* Standard */
+  
+
+
 }
 
 .header {
@@ -54,11 +62,11 @@ scroll-behavior: smooth;
   height: 100vh;
   overflow: hidden;
   background-color: var(--accent);
-  background-image: url("../iconred.jpg");
+  background-image: url("../iconred.svg");
   background-repeat: no-repeat;
 
   background-position: center;
-
+background-size: contain;
   display: flex;
   flex-direction: column;
 
@@ -203,19 +211,20 @@ a:hover {
   align-content: center;
   /*! text-align: justify; */
 }
-@media only screen and (max-width: 1013px) {
-  #work {
-    text-align: center;
-  }
-}
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1012px) {
+.row > section {
+  width: 30ch;
+}
+}
+@media only screen and (max-width: 800px) {
   .row > section {
     width: 100%;
   }
   section {
     text-align: center;
-    scroll-snap-align: center;
+      scroll-snap-align: center;
+  scroll-snap-stop: center;
     margin-bottom: 50vh;
     margin-top: 50vh;
   }
@@ -234,11 +243,5 @@ a:hover {
     scroll-snap-align: unset;
   }
 
-  .left {
 
-}
-section {
-  scroll-snap-align: center;
-  scroll-snap-stop: center;
-}
 }
