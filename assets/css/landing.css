@@ -62,7 +62,7 @@ user-select: none; /* Standard */
   height: 100vh;
   overflow: hidden;
   background-color: var(--accent);
-  background-image: url("../iconred.svg");
+  background-image: url("../icon.svg");
   background-repeat: no-repeat;
 
   background-position: center;
@@ -204,6 +204,8 @@ a:hover {
 .desaturate {
   filter: grayscale(100%);
 }
+
+
 
 #bottom {
   justify-content: center;
