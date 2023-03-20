@@ -136,7 +136,9 @@ table {
 
 /* page */
 body {
-    font-family: "Courier New", monospace;
+    /* mono fonts */
+    font-family: 'Source Code Pro','Courier New',Courier,monospace;
+   
     font-size: 99.8%;
     line-height: 150%;
     margin: 4% 4% 4%;
