@@ -236,10 +236,10 @@ em {
     p {
         max-width: none;
     }
-
+   
     .index {
 
-        background-position: 57%;
+        background-position: 59% top;
         background-attachment: fixed;
         background-image: ('../bk.jpg');
 
