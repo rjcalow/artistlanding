@@ -194,6 +194,11 @@ p {
     max-width: 50%;
 }
 
+footer {
+    font-size:  70%;
+    color:rgb(133, 133, 133);
+}
+
 .index {
     /* background-repeat: no-repeat;
     background-size: contain;
