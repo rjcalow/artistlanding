@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -87,12 +86,12 @@ time,
 mark,
 audio,
 video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -107,162 +106,155 @@ hgroup,
 menu,
 nav,
 section {
-    display: block;
+  display: block;
 }
 
 body {
-    line-height: 1;
+  line-height: 1;
 }
 
 ol,
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-    quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-    content: '';
-    content: none;
+  content: "";
+  content: none;
 }
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
+
+/* my minimalist css */
+
 
 /* page */
 body {
-    /* mono fonts */
-    font-family: 'Signika Negative', sans-serif;
-    font-size: 1em;
-    line-height: 1.6em;
-    margin: 4% 4% 4%;
+  /* mono fonts */
+  font-family: "Signika Negative", sans-serif;
+  font-size: 1em;
+  line-height: 1.6em;
+  margin: 4% 4% 4%;
 }
 
 .page {
-    width:60vw;
-    
+  width: 60vw;
 }
 
 /* menu */
 .header {
-    font-weight: bold;
-    margin-bottom: 0.1em;
-    letter-spacing: 0.010px;
+  font-weight: bold;
+  margin-bottom: 0.1em;
+  letter-spacing: 0.01px;
 }
 
-
 .subheader {
-    font-weight: lighter;
+  font-weight: lighter;
 }
 
 .header a:link,
 .header a:active,
 .header a:visited {
-    color: black;
+  color: black;
 }
 
 header {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .about {
-    
-    
 }
 .menu {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 .title {
-    font-weight: bold;
-    margin-bottom: 0.1em;
+  font-weight: bold;
+  margin-bottom: 0.1em;
 }
 
 figure {
-    margin-bottom: 2%;
+  margin-bottom: 2%;
 }
 
 figure img {
-
-    display: block;
-    max-height: 80vh;
-    max-width: 100%;
+  display: block;
+  max-height: 80vh;
+  max-width: 100%;
 }
-
-
 
 /* type */
 p {
-    margin-bottom: 2em;
-    max-width:40vw;
-    
+  margin-bottom: 2em;
+  max-width: 40vw;
 }
 
 footer {
-    font-size:  70%;
-    color:rgb(133, 133, 133);
+  font-size: 70%;
+  color: rgb(133, 133, 133);
 }
 
 .index {
-    /* background-repeat: no-repeat;
+  /* background-repeat: no-repeat;
     background-size: contain;
     background-image: linear-gradient(rgba(255, 255, 255, 0.479), rgba(000, 000, 000, 0)), url('../bk.jpg'); 
     background-position: bottom right;
     background-attachment: fixed; */
-
 }
-
 
 .menu li:first-child {
-    font-weight: bold;
+  font-weight: bold;
 }
-
 
 a:link {
-    text-decoration: none;
-    color: blue;
-
+  text-decoration: none;
+  color: blue;
 }
 
-
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 a:active,
 a:visited {
-    color: blue;
-    text-decoration: underline;
+  color: blue;
+  text-decoration: underline;
 }
 
 em {
-    background: lightyellow;
-    font-style: italic;
+  background: lightyellow;
+  font-style: italic;
 }
 
-@media all and (orientation:portrait) {
-    img {
-        max-height: none;
-    }
+@media all and (orientation: portrait) {
+  .page {
+    width: 100%;
+  }
+  img {
+    max-height: none;
+  }
 
-    p {
-        max-width: none;
-    }
-   
-    .index {
-       background-image:none;
-    }
+  p {
+    max-width: none;
+  }
 
-    .index header {
-        /* position: fixed;
+  .index {
+    background-image: none;
+  }
+
+  .index header {
+    /* position: fixed;
         top: 0px;
         left: 0px;
         background-color: white;
@@ -270,6 +262,5 @@ em {
         height: 6%;
         padding: 4%;
         margin: 0; */
-    }
-
+  }
 }
