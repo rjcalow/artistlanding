@@ -141,10 +141,14 @@ table {
 body {
     /* mono fonts */
     font-family: 'Signika Negative', sans-serif;
-
-    font-size: 99.8%;
-    line-height: 150%;
+    font-size: 1em;
+    line-height: 1.6em;
     margin: 4% 4% 4%;
+}
+
+.page {
+    width:60vw;
+    
 }
 
 /* menu */
@@ -153,6 +157,7 @@ body {
     margin-bottom: 0.1em;
     letter-spacing: 0.010px;
 }
+
 
 .subheader {
     font-weight: lighter;
@@ -168,6 +173,10 @@ header {
     margin-bottom: 2em;
 }
 
+.about {
+    
+    
+}
 .menu {
     margin-bottom: 2em;
 }
@@ -188,10 +197,13 @@ figure img {
     max-width: 100%;
 }
 
+
+
 /* type */
 p {
     margin-bottom: 2em;
-    max-width: 50%;
+    max-width:40vw;
+    
 }
 
 footer {
