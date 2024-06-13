@@ -266,6 +266,13 @@ em {
   /* Set to a large enough value to accommodate content */
 }
 
+/* expand yt shitty embeds */
+.yt-embed {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height:auto;
+}
+
 
 @media all and (orientation: portrait) {
   .page {
