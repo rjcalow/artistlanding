@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&family=Noto+Serif+JP:wght@300&family=Sawarabi+Mincho&display=swap");
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -68,11 +68,9 @@ th,
 td,
 article,
 aside,
-canvas,
 details,
-embed,
-figure,
 figcaption,
+figure,
 footer,
 header,
 hgroup,
@@ -138,24 +136,23 @@ table {
 
 /* my minimalist css */
 
-
 /* page */
 body {
-  /* mono fonts */
-  font-family: "Signika Negative", sans-serif;
-  font-size: 1em;
-  line-height: 1.6em;
-  margin: 4% 4% 4%;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.05em;
+  line-height: 1.9em;
+  margin: 3% 4% 4%;
 }
 
 .page {
   width: 60vw;
+  margin-top: 2em;
 }
 
 /* menu */
 .header {
   font-weight: bold;
-  margin-bottom: 0.1em;
+  margin-bottom: 2em;
   letter-spacing: 0.01px;
 }
 
@@ -170,7 +167,7 @@ body {
 }
 
 header {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 .about {}
@@ -180,12 +177,17 @@ header {
 }
 
 .title {
+  font-family: "Sawarabi Mincho", serif;
   font-weight: bold;
-  margin-bottom: 0.1em;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+  font-size: 2.4em;
+  letter-spacing: 0.04em;
 }
 
 figure {
-  margin-bottom: 2%;
+  margin-bottom: 1.5em;
+  margin-top: 0.5em;
 }
 
 figure img {
@@ -196,7 +198,7 @@ figure img {
 
 /* type */
 p {
-  margin-bottom: 2em;
+  margin-bottom: 2.2em;
   max-width: 40vw;
 }
 
@@ -237,7 +239,6 @@ em {
   font-style: italic;
 }
 
-
 .read-more-toggle {
   position: absolute;
   opacity: 0;
@@ -273,6 +274,10 @@ em {
   height:auto;
 }
 
+main {
+  margin-top: 2.5em;
+  margin-bottom: 1em;
+}
 
 @media all and (orientation: portrait) {
   .page {
