@@ -152,7 +152,6 @@ body {
 /* menu */
 .header {
   font-weight: bold;
-  margin-bottom: 2em;
   letter-spacing: 0.01px;
 }
 
@@ -167,7 +166,7 @@ body {
 }
 
 header {
-  margin-bottom: 3em;
+
 }
 
 .about {}
@@ -305,5 +304,13 @@ main {
         height: 6%;
         padding: 4%;
         margin: 0; */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .title {
+    font-size: 1.8em;
+    letter-spacing: 0.02em;
+    line-height: 1.3em;
   }
 }
