@@ -1,316 +1,427 @@
-@import url("https://fonts.googleapis.com/css2?family=Signika+Negative:wght@300&family=Noto+Serif+JP:wght@300&family=Sawarabi+Mincho&display=swap");
+/* reset */
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:"";content:none}
+table{border-collapse:collapse;border-spacing:0}
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* -----------------------------------------------
+   base
+   ----------------------------------------------- */
+body {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1em;
+  line-height: 1.9;
+  color: #222;
+  background: #fff;
+}
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+/* -----------------------------------------------
+   index page
+   ----------------------------------------------- */
+.page {
+  max-width: 960px;
+  padding: 2.5rem 3rem 4rem;
+}
+
+/* nav */
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 3.5rem;
+  font-size: 0.7rem;
+}
+
+.site-name {
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+
+.site-name a { color: #222; text-decoration: none; }
+.site-name a:hover { text-decoration: underline; }
+
+.site-nav a { color: #bbb; text-decoration: none; }
+.site-nav a:hover { color: #222; }
+.site-nav s { color: #e0e0e0; }
+
+/* kept for backwards compat */
+.site-nav-links { font-size: 0.7rem; display: flex; gap: 1.2rem; color: #bbb; }
+.site-nav-links a { color: #bbb; text-decoration: none; }
+.site-nav-links a:hover { color: #222; }
+.site-nav-links s { color: #e0e0e0; }
+
+/* hero */
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero-statement {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: bold;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  color: #111;
+}
+
+
+/* prose */
+.prose-block {
+  margin-bottom: 2rem;
+}
+
+.prose-block p {
+  font-size: clamp(1.1rem, 2vw, 1.8rem);
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 0.8em;
+}
+
+.prose-block a {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.prose-block a:hover {
+  border-bottom-color: #222;
+}
+
+.prose-block a:visited {
+  color: #555;
+}
+
+/* prose sections (bookmarks, boringstuff etc) */
+.prose {
+  margin-bottom: 1.2rem;
+}
+
+.prose p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 0.6em;
+}
+
+.prose a {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.prose a:hover { border-bottom-color: #222; }
+.prose a:visited { color: #555; }
+
+/* small text (credentials etc) */
+.small {
+  font-size: 0.78rem !important;
+  color: #888 !important;
+  line-height: 1.8;
+}
+
+/* sitemap */
+#sitemap p {
+  margin-bottom: 0;
+}
+
+.sitemap-letter {
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #bbb;
+  margin-top: 1.4rem;
+}
+
+/* section separators */
+#bookmarks {
+  margin-top: 1.5rem;
+}
+
+#boringstuff {
+  margin-top: 0.8rem;
+}
+
+/* foot note */
+.foot-note {
+  margin-top: 2rem;
+  padding-top: 0.8rem;
+}
+
+.foot-note p {
+  font-size: 0.72rem;
+  color: #999;
+  line-height: 1.8;
+}
+
+/* footer */
+footer {
+  margin-top: 1rem;
+  font-size: 0.68rem;
+  color: #aaa;
+}
+
+/* misc */
+em { background: lightyellow; font-style: italic; }
+.read-more-toggle { position:absolute; opacity:0; cursor:pointer; width:0; height:0; }
+.read-more { color: #222; cursor:pointer; text-decoration:underline; }
+.morecontent { display:none; max-height:0; overflow:hidden; transition:max-height 2.5s ease-in-out; }
+.read-more-toggle:checked + .morecontent { display:block; max-height:1000px; }
+.yt-embed { aspect-ratio:16/9; width:100%; height:auto; }
+
+/* -----------------------------------------------
+   gallery pages
+   ----------------------------------------------- */
+.gallery-body {
+  background: #fff;
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
+.gallery-header {
+  padding: 2.5rem 2rem 2rem;
+}
+
+.gallery-back {
   display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* my minimalist css */
-
-/* page */
-body {
-  font-family: "Noto Serif JP", serif;
-  font-size: 1.05em;
-  line-height: 1.9em;
-  margin: 3% 4% 4%;
-}
-
-.page {
-  width: 60vw;
-  margin-top: 2em;
-}
-
-/* menu */
-.header {
-  font-weight: bold;
-  letter-spacing: 0.01px;
-}
-
-.subheader {
-  font-weight: lighter;
-}
-
-.header a:link,
-.header a:active,
-.header a:visited {
-  color: black;
-}
-
-header {
-
-}
-
-.about {}
-
-.menu {
-  margin-bottom: 2em;
-}
-
-.title {
-  font-family: "Sawarabi Mincho", serif;
-  font-weight: bold;
-  margin-bottom: 1em;
-  margin-top: 1.5em;
-  font-size: 2.4em;
-  letter-spacing: 0.04em;
-}
-
-figure {
-  margin-bottom: 1.5em;
-  margin-top: 0.5em;
-}
-
-figure img {
-  display: block;
-  max-height: 80vh;
-  max-width: 100%;
-}
-
-/* type */
-p {
-  margin-bottom: 2.2em;
-  max-width: 40vw;
-}
-
-footer {
-  font-size: 70%;
-  color: rgb(133, 133, 133);
-}
-
-.index {
-  /* background-repeat: no-repeat;
-    background-size: contain;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.479), rgba(000, 000, 000, 0)), url('../bk.jpg'); 
-    background-position: bottom right;
-    background-attachment: fixed; */
-}
-
-.menu li:first-child {
-  font-weight: bold;
-}
-
-a:link {
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #bbb;
   text-decoration: none;
-  color: blue;
+  margin-bottom: 2rem;
 }
 
-a:hover {
-  text-decoration: underline;
+.gallery-back:hover { color: #222; }
+
+.gallery-title {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #111;
+  margin-bottom: 0.3rem;
 }
 
-a:active,
-a:visited {
-  color: blue;
-  text-decoration: underline;
-}
-
-em {
-  background: lightyellow;
+.gallery-about {
+  font-size: 0.72rem;
   font-style: italic;
+  color: #aaa;
+  line-height: 1.6;
 }
 
-.read-more-toggle {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  width: 0;
-  height: 0;
+.gallery-fig {
+  margin-bottom: 3rem;
+  margin-left: 2rem;
 }
 
-.read-more {
-  color: blue;
-  cursor: pointer;
-}
-
-.morecontent {
-  display: none;
-  /* Initially hide the morecontent */
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 2.5s ease-in-out;
-}
-
-.read-more-toggle:checked+.morecontent {
+.gallery-fig img {
   display: block;
-  /* Show morecontent when checkbox is checked */
-  max-height: 1000px;
-  /* Set to a large enough value to accommodate content */
+  width: auto;
+  max-width: 100%;
+  max-height: 85vh;
+  height: auto;
 }
 
-/* expand yt shitty embeds */
-.yt-embed {
-  aspect-ratio: 16 / 9;
-  width: 100%;
-  height:auto;
+.gallery-fig.scan img {
+  mix-blend-mode: multiply;
 }
 
-main {
-  margin-top: 2.5em;
-  margin-bottom: 1em;
+.gallery-foot {
+  padding: 0 2rem 4rem;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-@media all and (orientation: portrait) {
-  .page {
-    width: 100%;
-  }
+.gallery-foot a { color: #bbb; text-decoration: none; }
+.gallery-foot a:hover { color: #222; }
 
-  img {
-    max-height: none;
-  }
-
-  p {
-    max-width: none;
-  }
-
-  .index {
-    background-image: none;
-  }
-
-  .index header {
-    /* position: fixed;
-        top: 0px;
-        left: 0px;
-        background-color: white;
-        width: 100%;
-        height: 6%;
-        padding: 4%;
-        margin: 0; */
-  }
+/* gallery title on work pages (non-gallery template) */
+.title {
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  line-height: 1.3;
+  margin-bottom: 0.8em;
+  margin-top: 1.2em;
+  color: #111;
 }
 
+figure { margin-bottom: 1.5em; margin-top: 0.5em; }
+figure img { display: block; max-width: 100%; height: auto; }
+
+.gallery-body p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 1.4em;
+  padding: 0 2rem;
+  max-width: 960px;
+}
+
+/* -----------------------------------------------
+   text pages
+   ----------------------------------------------- */
+.text-page {
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.text-page main {
+  max-width: 960px;
+}
+
+.text-page header {
+  padding: 2.5rem 2rem 2rem;
+}
+
+.text-page header a {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 2rem;
+}
+
+.text-page header a:hover { color: #222; }
+
+.text-page h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  color: #111;
+  margin-bottom: 0.3rem;
+}
+
+.text-page header p {
+  font-size: 0.72rem;
+  font-style: italic;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.text-page section p {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 1.4em;
+  padding: 0 2rem;
+  max-width: 960px;
+}
+
+.text-page section a {
+  color: #222;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+
+.text-page section a:hover { border-bottom-color: #222; }
+.text-page section a:visited { color: #555; }
+
+.text-page section ul {
+  font-size: 0.9rem;
+  line-height: 1.9;
+  color: #444;
+  margin-bottom: 1.6em;
+  margin-left: 2rem;
+  list-style: disc;
+  padding-left: 1.5rem;
+  max-width: 960px;
+}
+
+.text-page section ul li {
+  margin-bottom: 0.8em;
+}
+
+.text-page section img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 85vh;
+  height: auto;
+  margin-bottom: 3rem;
+  margin-left: 2rem;
+}
+
+.text-page footer {
+  padding: 0 2rem 4rem;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.text-page footer a { color: #bbb; text-decoration: none; }
+.text-page footer a:hover { color: #222; }
+
+/* -----------------------------------------------
+   responsive
+   ----------------------------------------------- */
 @media screen and (max-width: 600px) {
-  .title {
-    font-size: 1.8em;
-    letter-spacing: 0.02em;
-    line-height: 1.3em;
+  /* gallery */
+  .gallery-header { padding: 1.5rem 1rem 1.5rem; }
+  .gallery-fig { margin-bottom: 2rem; margin-left: 0; }
+  .gallery-fig img { width: 100%; max-height: none; }
+  .gallery-foot { padding: 0 1rem 3rem; }
+  .title { font-size: 1.5em; }
+
+  /* text pages */
+  .text-page header { padding: 1.5rem 1rem 1.5rem; }
+  .text-page h1 { font-size: 1.5rem; }
+  .text-page section p { font-size: 1.05rem; padding: 0 1rem; }
+  .text-page section ul { font-size: 1.05rem; margin-left: 1rem; }
+  .text-page section img { width: 100%; max-height: none; margin-left: 0; }
+  .text-page footer { padding: 0 1rem 3rem; }
+
+  /* index — spread content across full screen height */
+  body { height: 100%; }
+
+  main { min-height: 100svh; display: flex; flex-direction: column; }
+
+  .page {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 1.2rem 2rem;
+    min-height: 100svh;
+  }
+
+  .site-nav {
+    margin-bottom: 0;
+    font-size: 0.65rem;
+  }
+
+  .hero {
+    margin-top: auto;
+    margin-bottom: 1.8rem;
+  }
+
+  .prose-block {
+    margin-bottom: auto;
+  }
+
+  .hero-statement {
+    font-size: clamp(1.9rem, 8vw, 2.6rem);
+    line-height: 1.2;
+  }
+
+  .prose-block p {
+    font-size: 1.25rem;
+    line-height: 1.75;
+  }
+
+  #boringstuff {
+    margin-top: 0;
+  }
+
+  footer {
+    margin-top: 1rem;
   }
 }
+
+
