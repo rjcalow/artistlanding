@@ -218,6 +218,14 @@ em { background: lightyellow; font-style: italic; }
   margin-left: 2rem;
 }
 
+.gallery-video {
+  display: block;
+  width: calc(100% - 4rem);
+  max-width: 860px;
+  height: auto;
+  margin: 0 2rem 3rem;
+}
+
 .gallery-fig img {
   display: block;
   width: auto;
@@ -253,7 +261,7 @@ em { background: lightyellow; font-style: italic; }
 figure { margin-bottom: 1.5em; margin-top: 0.5em; }
 figure img { display: block; max-width: 100%; height: auto; }
 
-.gallery-body p {
+.gallery-body p:not(.gallery-title):not(.gallery-about):not(.gallery-foot) {
   font-size: 0.9rem;
   line-height: 1.9;
   color: #444;
@@ -366,6 +374,7 @@ figure img { display: block; max-width: 100%; height: auto; }
   .gallery-header { padding: 1.5rem 1rem 1.5rem; }
   .gallery-fig { margin-bottom: 2rem; margin-left: 0; }
   .gallery-fig img { width: 100%; max-height: none; }
+  .gallery-video { width: 100%; margin: 0 0 2rem; }
   .gallery-foot { padding: 0 1rem 3rem; }
   .title { font-size: 1.5em; }
 
